@@ -3,18 +3,33 @@ public class FullPyramid {
 
         int rows = 5;
 
+
+        for (int i = 1; i <= rows + 1; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+                if (j < i) {
+                    System.out.print(" "); 
+                }
+            }
+            System.out.println();
+        }
+
+
+        int num = 1;
+
         for (int i = rows; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num);
+                num++;
 
-            // spaces
-            for (int j = rows; j > i; j--) {
-                System.out.print(" ");
+                if (num > 9) {
+                    num = 1;
+                }
+
+                if (j < i) {
+                    System.out.print(" "); 
+                }
             }
-
-            // stars
-            for (int k = 1; k <= i; k++) {
-                System.out.print("* ");
-            }
-
             System.out.println();
         }
     }
